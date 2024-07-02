@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+
+:root {
+	color-scheme: dark;
+	font-family: Reem Kufi Fun, sans-serif;
+}
+
+body {
+	background: #222;
+	color: transparent;
+	margin: 0;
+	transition: 2s;
+}
+
+body.drawn {
+	--annotation-color: transparent;
+	color: white;
+}
+
+rough-notation {
+	transition: 2s;
+}
+
+main {
+	padding: 1rem;
+	margin: 0 auto;
+	max-width: 768px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 2em 0 1rem;
+}
+
+ul,
+ol,
+li {
+	line-height: 1.5;
+}
+
+header * {
+	margin-bottom: 0;
+}
+
+header p:first-of-type {
+	display: inline-flex;
+	flex-flow: row wrap;
+	gap: 1em;
+}
+
+.carousel {
+	aspect-ratio: 59/41;
+	overflow: hidden;
+}
+
+body.drawn .carousel {
+	overflow: visible;
+}
+
+c-carousel {
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+body.drawn c-carousel {
+	opacity: 1;
+}
+
+c-carousel {
+	position: relative;
+}
+
+c-carousel::part(track) {
+	border: 1px solid #5555;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+c-carousel::part(controls) {
+	justify-content: end;
+	position: absolute;
+	right: 0;
+	top: -3rem;
+}
+
+c-carousel::part(indicators) {
+	display: none;
+}
+
+.card {
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background: black;
+	border-radius: 0.5rem;
+}
+
+.card h3 {
+	margin-top: 0;
+}
+
+.card *:last-child {
+	margin-bottom: 0;
+}
