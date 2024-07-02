@@ -52,8 +52,24 @@ header p:first-of-type {
 }
 
 .carousel {
-	aspect-ratio: 59/41;
-	overflow: hidden;
+	position: relative;
+}
+
+.carousel .placeholder-buttons {
+	align-items: center;
+	display: flex;
+	gap: 2rem;
+	height: 2rem;
+	pointer-events: none;
+	position: absolute;
+	right: 0.25rem;
+	top: -2.75rem;
+	width: 3rem;
+}
+
+.carousel .placeholder-buttons div {
+	height: 0.5rem;
+	width: 0.5rem;
 }
 
 body.drawn .carousel {
@@ -61,16 +77,15 @@ body.drawn .carousel {
 }
 
 c-carousel {
+	aspect-ratio: 59/41;
+	display: block;
 	opacity: 0;
+	overflow: hidden;
 	transition: opacity 2s;
 }
 
 body.drawn c-carousel {
 	opacity: 1;
-}
-
-c-carousel {
-	position: relative;
 }
 
 c-carousel::part(track) {
@@ -91,10 +106,10 @@ c-carousel::part(indicators) {
 }
 
 .card {
-	padding: 1rem;
-	margin-bottom: 1rem;
 	background: var(--card-color, transparent);
 	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
 }
 
 .card h3 {

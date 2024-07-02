@@ -33,6 +33,16 @@ const h2 = annotate(document.querySelector('h2 span'), {
 
 const carousel = document.querySelector('.carousel')
 
+const carouselButtons = document.querySelectorAll('.placeholder-buttons div')
+const carouselButtonAnnotations = [...carouselButtons].map((el) =>
+	annotate(el, {
+		...defaults,
+		type: 'circle',
+		strokeWidth: 2,
+		animationDuration: 500,
+	})
+)
+
 const carouselBox = annotate(carousel, {
 	...defaults,
 	type: 'box',
@@ -49,8 +59,9 @@ annotationGroup([
 	...labelAnnotations,
 	whySoSerious,
 	h2,
+	...carouselButtonAnnotations,
 	carouselBox,
 	carouselX,
 ]).show()
 
-setTimeout(() => document.body.classList.add('drawn'), 4000)
+setTimeout(() => document.body.classList.add('drawn'), 5000)
