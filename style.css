@@ -9,6 +9,7 @@ body {
 	background: #222;
 	color: transparent;
 	margin: 0;
+	overflow-y: hidden;
 	transition: 2s;
 }
 
@@ -16,6 +17,7 @@ body.drawn {
 	--annotation-color: transparent;
 	--card-color: black;
 	color: white;
+	overflow-y: auto;
 }
 
 rough-notation {
@@ -107,7 +109,7 @@ c-carousel::part(indicators) {
 
 .card {
 	background: var(--card-color, transparent);
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 	margin-bottom: 1rem;
 	padding: 1rem;
 }
@@ -118,4 +120,33 @@ c-carousel::part(indicators) {
 
 .card *:last-child {
 	margin-bottom: 0;
+}
+
+form {
+	display: grid;
+	gap: 1rem;
+}
+
+label {
+	display: grid;
+	gap: 0.5rem;
+}
+
+input,
+textarea {
+	border: 0;
+	border-radius: 0.5rem;
+	display: inline-block;
+	font: inherit;
+	padding: 0.5rem;
+}
+
+[type='submit'] {
+	background: white;
+	border: 0;
+	border-radius: 3rem;
+	color: black;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	width: max-content;
 }
