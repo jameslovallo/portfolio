@@ -14,6 +14,7 @@ body {
 
 body.drawn {
 	--annotation-color: transparent;
+	--card-color: black;
 	color: white;
 }
 
@@ -92,7 +93,7 @@ c-carousel::part(indicators) {
 .card {
 	padding: 1rem;
 	margin-bottom: 1rem;
-	background: black;
+	background: var(--card-color, transparent);
 	border-radius: 0.5rem;
 }
 
