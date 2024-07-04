@@ -2,7 +2,7 @@
 
 :root {
 	color-scheme: dark;
-	font-family: Reem Kufi Fun, sans-serif;
+	font-family: sans-serif;
 }
 
 body {
@@ -34,6 +34,7 @@ h1,
 h2,
 h3,
 h4 {
+	font-family: Reem Kufi Fun, sans-serif;
 	margin: 2em 0 1rem;
 }
 
